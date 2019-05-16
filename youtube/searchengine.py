@@ -7,9 +7,11 @@ def search(string: 'text to search', max_duration: 'max duration allowed in seco
     for entry in search_result['entries']:
         if len(data) == 5: break
         if entry['duration'] > max_duration: continue
-        track = { 'title': entry['title'],
+        track = { 'id'      : entry['id'],
+                  'artist'  : entry['artist'],
+                  'title'   : entry['title'],
                   'duration': entry['duration'],
-                  'url': entry['webpage_url'] }
+                  'url'     : entry['webpage_url'] }
         data.append(track)
     return data
 
