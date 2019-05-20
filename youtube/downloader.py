@@ -25,5 +25,5 @@ def download_mp3(url, track_info=True):
             ydl.download([url])
 
 if __name__ == '__main__':
-    download_mp3('https://www.youtube.com/watch?v=MnxU4ZxUh2k')
+    download_mp3('https://www.youtube.com/watch?v=6RQ_AEaWFnA')
 
