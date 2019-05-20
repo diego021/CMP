@@ -1,2 +1,2 @@
 pymongo==3.8.0
-youtube-dl==2019.5.11
+youtube-dl==2019.5.20

@@ -33,7 +33,6 @@ class YoutubeSong:
         url = self.search_info['url']
         self.track = download_mp3(url)
         exists = db.find_local_track(self.track['filename'])
-        print(exists)
         if not exists:
             db.insert('library', self.track)
 
