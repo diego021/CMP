@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import database.driver as db
+import db
 from .downloader import download_mp3
 from .searchengine import search_youtube
 
@@ -16,10 +16,9 @@ class YoutubeSong:
         while True:
             try:
                 print('Please choose any of the following options:\n')
-                for idx,value in enumerate(my_options):
-                    print('[{idx}] Title: {track[title]} // Artist: {track[artist]} // Duration: {track[duration]}'.format(idx=idx+1, track=value))
-                print()
-                answer = int(input('I choose option: ')) - 1
+                for idx,track_info in enumerate(my_options):
+                    print('[{idx}] Title: {track[title]} // Artist: {track[artist]} // Duration: {track[duration]}'.format(idx=idx+1, track=track_info))
+                answer = int(input('\nI choose option: ')) - 1
                 if my_options[answer] and answer != -1:
                     break
             except (IndexError, ValueError):

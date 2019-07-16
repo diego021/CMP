@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import youtube_dl
 
-def search_youtube(string: 'text to search', max_duration: 'max duration allowed in seconds'=420) -> list:
-    search_result = youtube_dl.YoutubeDL({}).extract_info('ytsearch10: {}'.format(string), download=False)
+def search_youtube(search: 'text to search', max_duration: 'max duration allowed in seconds'=420) -> list:
+    search_result = youtube_dl.YoutubeDL({}).extract_info('ytsearch10: {}'.format(search), download=False)
     data = []
     for entry in search_result['entries']:
         if len(data) == 5: break
