@@ -5,7 +5,7 @@ import youtube_dl
 def download_mp3(url, track_info=True):
     ydl_opts = { 'format': 'bestaudio/best',
                  'download_archive': '/tmp/cmpindex',
-                 'outtmpl': '/home/diego021/Music/%(title)s.%(ext)s',
+                 'outtmpl': 'static/%(title)s.%(ext)s',
                  'noplaylist': True,
                  'postprocessors': [{ 'key': 'FFmpegExtractAudio',
                                       'preferredcodec': 'mp3',
