@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  cache:
+    image: redis:alpine
+    container_name: cmp-redis
+  web:
+    build: .
+    #command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0:8000"
+    command: bash run.bash
+    container_name: cmp-django
+    volumes:
+      - .:/cmp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - cache

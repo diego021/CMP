@@ -1,4 +1,11 @@
-pymongo==3.8.0
-youtube-dl==2019.7.16
-Flask==1.1.1
-Flask-PyMongo==2.3.0
+#pymongo==3.8.0
+#Flask==1.1.1
+#Flask-PyMongo==2.3.0
+youtube-dl>=2019.7.16
+django>=2.0
+djangorestframework
+markdown
+django-filter
+django-celery-email
+redis
+celery
